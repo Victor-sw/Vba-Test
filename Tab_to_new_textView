@@ -1,0 +1,7 @@
+Private Sub TextBox1_KeyDown(ByVal KeyCode As MSForms.ReturnInteger, ByVal Shift As Integer)
+     
+    If KeyCode = vbKeyTab Then
+        TextBox4.Activate
+    End If
+     
+End Sub
