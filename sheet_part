@@ -1,0 +1,8 @@
+
+Private Sub Worksheet_SelectionChange(ByVal Target As Range)
+  
+    Application.OnKey "{TAB}", "NextCell"
+End Sub
+
+
+
