@@ -1,0 +1,19 @@
+Private Sub NextCell()  ' 按TAB键时的跳转位置控制
+    Dim i As Integer
+    Dim c_Address As String
+    c_Address = ActiveCell.Address
+  
+    Arr = Split("$A$1,$C$2,$D$3,$B$4,$C$7", ",") ' 候选格子必须为  $数字$数字  的形式
+    
+    i = Application.Match(c_Address, Arr, 0)
+   ' MsgBox ("i:" & i)
+    If i < UBound(Arr) + 1 Then
+       ' MsgBox (":" & i)
+        Range(Arr(i)).Select
+    Else
+        i = 0
+       ' MsgBox (":" & i)
+         Range(Arr(i)).Select
+    End If
+End Sub
+
